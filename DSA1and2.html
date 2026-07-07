@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA-1 & 2</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @media print {
+      @page { size: A4; margin: 20mm; }
+      body { background-color: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-break-avoid { break-inside: avoid; }
+      .shadow-xl, .shadow, .shadow-md { box-shadow: none !important; }
+      .bg-base-100, .bg-base-200, .bg-neutral { background-color: white !important; color: black !important; border: 1px solid #ccc; }
+      .text-primary, .text-secondary, .text-accent { color: black !important; }
+      .divider { border-bottom: 2px solid #000; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-base-200">
+
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 no-print">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
+          <li><a href="#about">About</a></li>
+          <li><a href="#lectures">Lectures</a></li>
+          <li><a href="#world">Use in World</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl font-bold">CS26: DSA-1 & 2</a>
+    </div>
+    
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 font-semibold">
+        <li><a href="#about">About</a></li>
+        <li><a href="#lectures">Lectures</a></li>
+        <li><a href="#world">Use in World</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+    
+    <div class="navbar-end">
+      <label class="flex cursor-pointer gap-2 items-center mr-4">
+        <span class="label-text font-semibold">Retro</span>
+        <input type="checkbox" value="synthwave" class="toggle theme-controller toggle-primary" />
+        <span class="label-text font-semibold">Synthwave</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 py-8 max-w-5xl">
+    
+    <section id="about" class="hero rounded-3xl bg-base-100 shadow-xl overflow-hidden mb-16 print-break-avoid">
+      <div class="hero-content flex-col lg:flex-row-reverse p-10">
+        <div class="lg:w-1/3 flex justify-center mb-6 lg:mb-0">
+          <div class="avatar placeholder">
+            <div class="bg-neutral text-neutral-content rounded-full w-48 shadow-inner">
+              <span class="text-3xl">DSA-1 & 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-2/3">
+          <h1 class="text-4xl font-bold mb-4">Core Programming Concepts</h1>
+          <p class="text-lg mb-6">
+            This is a course teaching how and why data structures are made (mostly so programmers don't have to cry into their keyboards at 3 AM) and how to build algorithms that make comprehensive, not just 'I copy pasted this from Stack Overflow and prayed,' use of them. Think of it as teaching your code some manners: how to store things properly, find them without throwing a tantrum, and actually be fast about it. By the end, you'll look at a messy pile of data the way a librarian looks at a chaotic bookshelf: mildly offended, but ready to fix it.
+          </p>
+          <a href="Curriculum/DSAcurr.pdf" target="_blank" class="btn btn-primary no-print">Download Course Syllabus PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider-primary my-12 text-2xl font-bold">Syllabus & Lectures</div>
+
+    <section id="lectures" class="space-y-4 mb-16">
+      
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" checked="checked" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 1: Overcoming Limitations
+        </div>
+        <div class="collapse-content"> 
+          <p>Introduction to the constraints of computing and an overview of efficient problem-solving strategies.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 2: Growth of Functions
+        </div>
+        <div class="collapse-content"> 
+          <p>Asymptotic notation, Big-O, Big-Omega, and Big-Theta to measure algorithmic efficiency.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 3: Elementary Sorts
+        </div>
+        <div class="collapse-content"> 
+          <p>Bubble sort, Insertion sort, and Selection sort. Analyzing basic sorting mechanisms.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 4: Elementary Data Structures
+        </div>
+        <div class="collapse-content"> 
+          <p>Understanding Arrays, Linked Lists, and contiguous vs. non-contiguous memory allocations.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 5: Stacks and Queues
+        </div>
+        <div class="collapse-content"> 
+          <p>LIFO and FIFO principles, along with real-world applications in program execution and buffering.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 6: Hashing, Sets and Maps
+        </div>
+        <div class="collapse-content"> 
+          <p>Hash functions, collision resolution strategies, and implementing constant time lookups.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 7: Binary Trees, BSTs and Heaps
+        </div>
+        <div class="collapse-content"> 
+          <p>Tree traversals, binary search tree properties, and priority queue implementation using heaps.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 8: Red-Black Trees
+        </div>
+        <div class="collapse-content"> 
+          <p>Self-balancing binary search trees, rotations, and guaranteeing logarithmic time operations.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 9: Augmenting Data Structures
+        </div>
+        <div class="collapse-content"> 
+          <p>Adding custom information to standard data structures to solve dynamic problems efficiently.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 10: Advanced Data Structures
+        </div>
+        <div class="collapse-content"> 
+          <p>Tries, Segment Trees, Fenwick Trees, and B-Trees for specialized performance needs.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 11: Divide-and-Conquer
+        </div>
+        <div class="collapse-content"> 
+          <p>Breaking problems down into independent subproblems. Introduction to the Master Theorem.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 12: Binary Search and Merge Sort
+        </div>
+        <div class="collapse-content"> 
+          <p>Mastering logarithmic search spaces and applying divide-and-conquer to array sorting.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 13: Heapsort and Quicksort
+        </div>
+        <div class="collapse-content"> 
+          <p>In-place sorting techniques, partitioning strategies, and randomized algorithm analysis.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 14: Sorting in Linear Time and External Sorting
+        </div>
+        <div class="collapse-content"> 
+          <p>Counting sort, Radix sort, and handling data sets too massive to fit into main memory.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 15: String Algorithms
+        </div>
+        <div class="collapse-content"> 
+          <p>Pattern matching, KMP, Rabin-Karp, and handling text structures effectively.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 16: Dynamic Programming
+        </div>
+        <div class="collapse-content"> 
+          <p>Memoization and tabulation for solving overlapping subproblems. Optimal substructure analysis.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 17: Greedy Algorithms and Amortized Analysis
+        </div>
+        <div class="collapse-content"> 
+          <p>Making locally optimal choices for global optimizations and calculating average performance over time.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 18: Graphs
+        </div>
+        <div class="collapse-content"> 
+          <p>Representations (adjacency matrix vs list), DFS, BFS, and core graph traversals.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 19: Graph Algorithms
+        </div>
+        <div class="collapse-content"> 
+          <p>Dijkstra's, Bellman-Ford, Kruskal's, Prim's, and topologically sorting directed acyclic graphs.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 20: Math Algorithms
+        </div>
+        <div class="collapse-content"> 
+          <p>Number theory, fast exponentiation, prime sieves, and cryptographic primitives.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 21: Multithreading in Algorithms
+        </div>
+        <div class="collapse-content"> 
+          <p>Concurrency, race conditions, synchronization, and designing algorithms for multi-core processors.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 shadow-md print-break-avoid">
+        <input type="radio" name="lecture-accordion" /> 
+        <div class="collapse-title text-xl font-medium">
+          Chapter 22: Closing Remarks
+        </div>
+        <div class="collapse-content"> 
+          <p>Final project guidelines, course review, and where to take these skills next.</p>
+          <div class="mt-4 no-print flex gap-2">
+            <a href="#" class="btn btn-sm btn-secondary">View PDF Notes</a>
+            <a href="#" class="btn btn-sm btn-outline">Practice Questions</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider divider-secondary my-12 text-2xl font-bold">Use in the Real World</div>
+
+    <section id="world" class="mb-16">
+      <div class="card lg:card-side bg-base-100 shadow-xl print-break-avoid">
+        <figure class="lg:w-1/3 bg-base-300 flex items-center justify-center p-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </figure>
+        <div class="card-body lg:w-2/3">
+          <h2 class="card-title text-2xl">Real Life Proof That None of This Was a Cruel Joke</h2>
+          <p class="py-4">
+            Data Structures and Algorithms are used in every field where a human need has to be solved using a computer, whether it's a hospital database quietly guarding your medical records, college grades deciding your fate one semester at a time, searching the web faster than you can finish typing your question, or even Artificial Intelligence Transformers pretending to understand you. Basically, nothing serious ever gets done on a computer without Data Structures and Algorithms sneaking in somewhere behind the scenes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider-accent my-12 text-2xl font-bold">References & Reading</div>
+
+    <section id="references" class="mb-16 print-break-avoid">
+      <div class="overflow-x-auto bg-base-100 rounded-3xl shadow-xl p-4">
+        <table class="table w-full">
+          <thead>
+            <tr class="text-base">
+              <th>Title</th>
+              <th>Author / Source</th>
+              <th>Type</th>
+              <th class="no-print">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold">The C++ Programming Language</td>
+              <td>Bjarne Stroustrup</td>
+              <td>Textbook</td>
+              <td class="no-print"><a class="link link-primary">Library</a></td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Embedded Control Systems Design</td>
+              <td>IEEE Publications</td>
+              <td>Journal PDF</td>
+              <td class="no-print"><a href="pdfs/reference_ieee.pdf" target="_blank" class="link link-primary">Access</a></td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Official Course Practice Bank</td>
+              <td>Course Staff</td>
+              <td>50-Q PDF</td>
+              <td class="no-print"><a href="pdfs/full_practice_bank.pdf" target="_blank" class="link link-primary">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer p-10 bg-neutral text-neutral-content rounded-t-3xl mt-12 print-break-avoid">
+    <aside>
+      <div class="text-3xl font-bold mb-2">Hanuman Group</div>
+      <p>Delivering high-quality educational infrastructure.<br/>Designed for rigorous academic standards.</p>
+    </aside> 
+    <nav class="no-print">
+      <h6 class="footer-title">Navigation</h6> 
+      <a href="#about" class="link link-hover">About Course</a>
+      <a href="#lectures" class="link link-hover">Lecture PDFs</a>
+      <a href="#world" class="link link-hover">Industry Applications</a>
+    </nav> 
+    <nav class="no-print">
+      <h6 class="footer-title">Legal & Contact</h6> 
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Instructor Email</a>
+    </nav> 
+  </footer>
+
+</body>
+</html>
